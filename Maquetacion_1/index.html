@@ -1,0 +1,271 @@
+<!-- Indica que versión de HTML se va a usar -->
+<!DOCTYPE HTML>
+<!-- Indica el lenguaje -->
+<html lang='es'>
+    <!-- Incluye los Metadatos -->
+    <head>
+        <!-- Permite leer los caracteres especiales del idioma -->
+        <meta charset='utf-8' />
+        <title>Maquetación en CSS</title>
+        <!-- Favicon Logo que aparece en la pestaña y se declara así. Tamaño más personalizado64x64 -->
+        <link rel='icon' type='image/x-icon' href='imgs/logo.png' /> 
+        <link rel='stylesheet' type='text/css' href='css/styles.css' />
+    </head>
+    <body>
+        <!-- Inicio de la cabecera -->
+        <header id='cabecera'>
+            <div id='logotipo'>
+                <img src='imgs/logo.png' alt='Logotipo de la web'/>
+            </div>
+
+            <h1>
+                <a href='index.html'>Master en CSS</a>
+            </h1>
+        </header>
+        <!-- Fin de la cabecera -->
+
+        <!-- Inicio del Menu de Navegación -->
+        <nav id='menu'>
+            <ul>
+                <li><a href='#'>Inicio</a></li>
+                <li><a href='#'>Contenido</a></li>
+                <li><a href='#'>Requerimientos</a></li>
+                <!-- Al poner menús desplegables se mueve todo ya que se colocan después del elemento
+                    a desplegar, esto se tiene que manejar con CSS además se colocan dentro de las 
+                    etiquetas <li> _____ </li><-->
+                <li>
+                    <a href='#'>Lenguajes</a>
+                    <ul>
+                        <li><a href='#'>HTML</a></li>
+                        <li><a href='#'>CSS</a></li>
+                        <li><a href='#'>C, C++, C#</a></li>
+                        <li><a href='#'>JavaScript</a></li>
+                        <li><a href='#'>Python</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>Frameworks</a>
+                    <ul>
+                        <li><a href='#'>LESS</a></li>
+                        <li><a href='#'>Laravel</a></li>
+                        <li><a href='#'>SASS</a></li>
+                        <li><a href='#'>BoosTrap</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Proyectos</a></li>
+                <li><a href='#'>El instructor</a></li>
+                <li><a href='#'>Reseñas</a></li>
+                <li><a href='#'>Blg</a></li>
+                <li><a href='#'>Contacto</a></li>
+                <li><a href='#'>Artículos</a></li>
+                <li><a href='#'>Compras</a></li>
+                <li><a href='#'>Laptops</a></li>
+            </ul>
+        </nav>
+        <!-- Fin del Menu de Navegación -->
+        <!-- Inicio del Contenido central -->
+        <div id='central'>
+            <!-- Inicio de la Barra lateral -->
+            <!-- En las barras lateral las clases se llaman widgets -->
+            <aside id='lateral'>
+                <div class='widget' id='login'>
+                    <h3>Entrar a la web</h3>
+                        <form>
+                            <label id='usuario'>Usuario:</label>
+                            <input type='text' />
+                            <label id='contraseña'>Contraseña:</label>
+                            <input type='password' />
+                            <input type='submit' value='Entrar' />
+                        </form>
+                        <a href='#'>Zona de alumnos</a>
+                        <a href='#'>Zona del profesor</a>
+                        <a href='#'>Acceso a calificaciones</a>
+                </div>
+
+                <div class='widget' id='login'>
+                    <h3 class='blue'>Aula virtual 1</h3>
+                        <form>
+                            <label id='usuario'>Nombre de usuario:</label>
+                            <input type='text' />
+                            <label id='contraseña'>Contraseña:</label>
+                            <input type='password' />
+                            <input type='submit' value='Entrar' />
+                        </form>
+                </div>
+
+                <div class='widget' id='login'>
+                    <h3 class='red'>Aula virtual 2</h3>
+                        <form>
+                            <label id='usuario'>Nombre de usuario:</label>
+                            <input type='text' />
+                            <label id='contraseña'>Contraseña:</label>
+                            <input type='password' />
+                            <input type='submit' value='Entrar' />
+                        </form>
+                </div>
+                <div class='widget' id='login'>
+                    <h3>Enlaces de interés</h3>
+                        <ul >
+                            <li><a href='#'>Máster en JavaScript</a></li>
+                            <li><a href='#'>Máster en PHP</a></li>
+                            <li><a href='#'>Máster en Frameworks JS</a></li>
+                            <li><a href='#'>Máster en webs full-stack</a></li>
+                            <li><a href='#'>victorroblesweb.es</a></li>
+                        </ul>
+                </div>
+                <div>
+
+                </div>
+            </aside>
+            <!-- Fin de la Barra lateral -->
+
+            <!-- Inicio de las secciones -->
+            <section id='secciones'>
+                <div id='frontend'>
+                    <span class='stickers'>
+                        <img class='stickerOne' src='imgs/scotch.png' alt='Pegatina' />
+                        <img class='stickerTwo' src='imgs/scotch.png' alt='Pegatina' />
+                    <h2 class='titulo'>Noticias de FrontEnd</h2>
+                    <article class='articulo'>
+                    <!-- Etiquetas de iconos -->
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random
+                        </p>
+                    <span class='fecha'>[20-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 2
+                        </p>
+                    <span class='fecha'>[21-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 3
+                        </p>
+                    <span class='fecha'>[22-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 4
+                        </p>
+                    <span class='fecha'>[23-12-2020. Josué Vargas]</span>
+                    </article>
+                </div>
+            </section>
+
+            <section id='secciones'>
+                <div id='backend'>
+                    <span class='stickers'>
+                        <img class='stickerOne' src='imgs/scotch.png' alt='Pegatina' />
+                        <img class='stickerTwo' src='imgs/scotch.png' alt='Pegatina' />
+                    <h2 class='titulo red'>Noticias de BackEnd</h2>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random
+                        </p>
+                    <span class='fecha'>[20-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 2
+                        </p>
+                    <span class='fecha'>[21-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 3
+                        </p>
+                    <span class='fecha'>[22-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 4
+                        </p>
+                    <span class='fecha'>[23-12-2020. Josué Vargas]</span>
+                    </article>
+                </div>
+            </section>
+
+            <section id='secciones'>
+                <div id='instructor'>
+                    <span class='stickers'>
+                        <img class='stickerOne' src='imgs/scotch.png' alt='Pegatina' />
+                        <img class='stickerTwo' src='imgs/scotch.png' alt='Pegatina' />
+                    <h2 class='titulo orange'>Noticias de Instructor</h2>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random
+                        </p>
+                    <span class='fecha'>[20-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 2
+                        </p>
+                    <span class='fecha'>[21-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 3
+                        </p>
+                    <span class='fecha'>[22-12-2020. Josué Vargas]</span>
+                    </article>
+                    <article class='articulo'>
+                    <span class='icon'>a</span>
+                        <p>
+                            <a href='#'>Título de la entrada</a>
+                            Texto random 4
+                        </p>
+                    <span class='fecha'>[23-12-2020. Josué Vargas]</span>
+                    </article>
+                </div>
+                <!-- WEB SYMBOLS -->
+            </section>
+            <!-- Fin de las secciones -->
+            <!-- Este aside se separa porque en el modelo original esta separado -->
+            <aside id='frase'>
+                <div>
+                    <h3>¡Tú puedes!</h3>
+                    <a href='#'>Leer más frases</a>
+                </div>
+            </aside>
+
+            <div class='clearfix'></div>
+            <div id='enlace'>
+                <a href='#'>[Ver historico de noticias]</a>
+            </div>
+        </div>
+        <!-- Fin del Contenido central-->
+
+        <!-- Inicio de Footer -->
+        <div class='clearfix'></div>
+        <footer id='piePagina'>
+            <p>&copy; Desarrollado por Josué Vargas WEB <br/><p>
+            <p>Más contenido y formación de desarrolo web en <a href='http://Youtube.com'> Youtube</a><p>
+        </footer>
+        <!-- Fin de Footer -->
+    </body>
+</html>

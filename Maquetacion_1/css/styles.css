@@ -1,0 +1,448 @@
+/* FUENTES */
+
+@font-face {
+    font-family: NevisCustom;
+    src: url("fonts/nevis.eot");
+    src: url("fonts/nevis.eot?#ief") format("embedded-opentype"), url("fonts/nevis.woff") format("woff"), url("fonts/nevis.ttf") format("truetype"), url("fonts/nevis.svg") format("svg");
+    /*El prefijo ?#iefix arregla la visualización dentro de internet explorer
+    Nota: siempre deben de llevar comillas sino no las cargará*/
+    /*Se pueden establecer ciertas características de la fuente*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: IconsCustom;
+    src: url("fonts/websymbols-regular-webfont.svg#webSymbolsRegular"), format("svg"), url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/websymbols-regular-webfont.woff") format("woff"), url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FjallaCustom;
+    src: url("fonts/FjallaOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ESTILOS GENERALES */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    background-image: url(../imgs/paven.png);
+    /*Se colocan los puntos para indicar que sales de la carpeta*/
+}
+
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #529125;
+}
+
+a:hover {
+    color: #285616;
+}
+
+.red {
+    color: #9b2422 !important;
+}
+
+.blue {
+    color: #0c73f2 !important;
+}
+
+.orange {
+    color: #d69d2a !important;
+}
+
+.icon {
+    font-family: "IconsCustom";
+    float: left;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+
+/* FORMULARIOS */
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select {
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background-color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+select:focus {
+    border: 2px solid #70b231;
+    color: black;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+button {
+    /* A todo se le puede poner display:block; para poder manipularlos mejor */
+    display: block;
+    border-radius: 4px;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b231;
+    border: 1px solid green;
+    margin: 0px auto;
+    color: white;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+button:hover {
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active,
+button:active {
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 4px #ccc;
+}
+
+
+/* CABECERA */
+
+#cabecera {
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    /* Esto hace que se centre*/
+}
+
+#cabecera #logotipo {
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 20px;
+    transition: all 300ms;
+}
+
+#cabecera #logotipo img {
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 140px;
+}
+
+#cabecera h1 {
+    /*Esta hace que el texto se modifique la etiqueta <a> solo contiene el enlace*/
+    text-align: center;
+    font-size: 40px;
+    color: #70b271;
+    font-family: "NevisCustom";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-shadow: 0px 2px 1px #333333;
+    transition: all 300ms;
+    /*Se ejecuta cuando se entra a la página*/
+    /* Por default abarca el 100%, si se le da dimensiones abarcara lo que se le de */
+    width: 800px;
+    margin: 0px auto;
+}
+
+#cabecera h1:hover {
+    text-shadow: 0px 15px 1px #333333, 0px 0px 4px #70b271, 0px 0px 4px yellow;
+    /*Si me extiendo de lo normal con este atributo, lo que hace es que duplica las palabras
+    ya sea 1, 2, 3, etc...*/
+}
+
+#cabecera a {
+    text-decoration: none;
+    color: #70b271;
+}
+
+
+/* Barra de Navegación / Menú */
+
+#menu {
+    min-width: 100%;
+    background-color: #333;
+    height: 40px;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1300px;
+}
+
+#menu>ul>li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+    /*La transición se complementa con los hover*/
+}
+
+#menu>ul>li a {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#menu>ul>li:first-child {
+    border-left: 1px solid gray;
+}
+
+#menu>ul>li:hover {
+    background-color: #70b271;
+    box-shadow: 0px 0px 4px gray inset;
+}
+
+
+/* Menú desplegable */
+
+#menu>ul>li>ul {
+    /* Limpia */
+    display: none;
+    /* Para que disfigure la estructura del sitio web / del menú, para que no vayan abajo */
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 0px 4px black;
+    z-index: 1;
+}
+
+#menu>ul>li:hover>ul {
+    display: block;
+}
+
+#menu>ul>li:hover>ul>li {
+    background-color: #f2f1f1;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+#menu>ul>li:hover>ul>li>a {
+    color: #666666;
+}
+
+#menu>ul>li:hover>ul>li:hover {
+    background-color: #ccc;
+    box-shadow: 0px 0px 2px black inset;
+}
+
+
+/* CONTENIDO */
+
+#central {
+    width: 1250px;
+    /* Esto es para que tenga un scroll mínimo */
+    min-height: 1100;
+    margin: 0px auto;
+}
+
+
+/* BARRA LATERAL */
+
+#lateral,
+#frase {
+    /* La altura que se da por default es por el contenidoque hay */
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif, Helvetica, Arial;
+}
+
+#frase {
+    /*Son posiciones relativas entre lateral y frase y para que se pueda ir abajo hay que limpiar
+    clear: both;*/
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    width: 180px;
+}
+
+#lateral .widget {
+    /* Los div ya tiene la propiedad de block, solo se tienen que poner a los que no la tienen
+    por ejemplo: la etiqueta a */
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+}
+
+#lateral .widget:last-child {
+    margin-bottom: 20px;
+}
+
+#lateral h3 {
+    display: block;
+    /* Se puede utilzar el 100% porque ya se definio el ancho */
+    width: 100%;
+    height: 21px;
+    text-align: center;
+    background-color: #F2F3F2;
+    color: #333333;
+    box-shadow: 0px 0px 2px gray inset;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid#ccc;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}
+
+#lateral li {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    /* Quitar los botones o modificar la lista */
+    list-style: square;
+}
+
+
+/* FORMULARIOS DE LA BARRA LATERAL */
+
+#lateral div label,
+#lateral div input[type='text'],
+#lateral div input[type='email'],
+#lateral div input[type='password'],
+#lateral div a {
+    display: block;
+    width: 95%;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+#lateral div input[type='buttom'],
+#lateral div input[type='sumit'],
+#lateral div buttom {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#lateral input,
+#lateral label {
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+/* SECCIONES */
+
+#secciones {
+    float: right;
+    width: 75%;
+    font-family: sans-serif, arial, helvetica;
+    margin-right: 20px;
+}
+
+#secciones .titulo {
+    font-family: FjallaCustom;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-top: -20px;
+}
+
+#secciones div {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9;
+    color: #333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#secciones .articulo {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#secciones .fecha {
+    color: gray;
+    font-size: 14px;
+}
+
+#secciones .stickerOne,
+#secciones .stickerTwo {
+    /* Se coloca hasta arriba porque ya tiene su caja predifinida y pertenece a esa caja */
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+
+#secciones .stickerTwo {
+    margin-left: 861px;
+}
+
+#enlace {
+    float: right;
+    margin-top: 20px;
+    font-family: sans-serif, arial, helvetica;
+    margin-right: 20px;
+}
+
+
+/* Footer */
+
+#piePagina {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sans-serif, arial, helvetica;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
